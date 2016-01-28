@@ -1,0 +1,14 @@
+<snippet>
+    <content><![CDATA[
+\$file = \$_SERVER['DOCUMENT_ROOT'].'/log.txt';
+ob_start();
+var_dump(\$array);
+\$buffer = ob_get_clean();
+\$buffer .= \$buffer . "\n";
+file_put_contents(\$file, \$buffer);
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <!-- <tabTrigger>bajax</tabTrigger> -->
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.PHP</scope> -->
+</snippet>

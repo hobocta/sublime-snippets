@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+<?
+if (!\$is['front']) {
+	?><a href="<?= SITE_DIR ?>"><?
+}
+?>
+<?\$APPLICATION->IncludeComponent(
+	"bitrix:main.include",
+	"",
+	array(
+		"AREA_FILE_SHOW" => "file",
+		"PATH" => SITE_DIR . "includes/logo.php"
+	),
+	false
+);?>
+<?
+if (!\$is['front']) {
+	?></a><?
+}
+?>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>bajax</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.PHP</scope> -->
+</snippet>

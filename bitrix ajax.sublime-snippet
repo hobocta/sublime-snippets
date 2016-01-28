@@ -1,0 +1,32 @@
+<snippet>
+    <content><![CDATA[
+<?
+error_reporting(0);
+ini_set("display_errors", FALSE);
+ini_set("display_startup_errors", FALSE);
+define("NO_KEEP_STATISTIC", true);
+define("PUBLIC_AJAX_MODE", true);
+define("STOP_STATISTICS", true);
+define("NO_AGENT_STATISTIC", true);
+define("NO_AGENT_CHECK", true);
+
+require(\$_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_before.php");
+
+\$APPLICATION->IncludeComponent(
+    "${1:internetclient:catalog.element.price}",
+    "",
+    array(),
+    false,
+    array(
+        "HIDE_ICONS" => "Y",
+    )
+);
+
+require(\$_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/epilog_after.php");
+?>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <!-- <tabTrigger>bajax</tabTrigger> -->
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.PHP</scope> -->
+</snippet>

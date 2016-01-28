@@ -1,0 +1,19 @@
+<snippet>
+    <content><![CDATA[
+\$('.top__menu-link').on('click', function(event) {
+	event.preventDefault();
+	var href = \$(this).attr('href');
+	href = href.replace('#', '');
+	var anchor = \$('a[name=' + href + ']');
+	if (anchor.length) {
+		\$('html, body').animate({
+			scrollTop: anchor.eq(0).offset().top
+		}, 500);
+	}
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <!-- <tabTrigger>hello</tabTrigger> -->
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>
