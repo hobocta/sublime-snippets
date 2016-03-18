@@ -1,16 +1,16 @@
 <snippet>
     <content><![CDATA[
 /**
- * Ресайзим большие фото, присланные через форму "Добавить свой пункт проката"
+ * Ресайзим большие фото, присланные через форму 'Добавить свой пункт проката'
  *
  * @param mixed \$arFields
  */
 function addPunktResizePhotoes(&\$arFields) {
 	if (!defined('ADD_PUNKT_IBLOCK_ID')) {
-		throw new Exception("ADD_PUNKT_IBLOCK_ID is not defined");
+		throw new Exception('ADD_PUNKT_IBLOCK_ID is not defined');
 	}
 	if (!defined('ADD_PUNKT_PHOTO_PROP_ID')) {
-		throw new Exception("ADD_PUNKT_PHOTO_PROP_ID is not defined");
+		throw new Exception('ADD_PUNKT_PHOTO_PROP_ID is not defined');
 	}
 	if (\$arFields['IBLOCK_ID'] == ADD_PUNKT_IBLOCK_ID) {
 		if (
@@ -22,8 +22,8 @@ function addPunktResizePhotoes(&\$arFields) {
 					CAllFile::ResizeImage(
 						\$photo,
 						array(
-							"width" => 1200,
-							"height" => 1200
+							'width' => 1200,
+							'height' => 1200
 						),
 						BX_RESIZE_IMAGE_PROPORTIONAL
 					);

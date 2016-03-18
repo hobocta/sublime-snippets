@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-if (!\Bitrix\Main\Loader::includeModule("${1:iblock}")) {
+if (!\Bitrix\Main\Loader::includeModule('${1:iblock}')) {
 	ShowError('Module iblock is not loaded');
 	return;
 }

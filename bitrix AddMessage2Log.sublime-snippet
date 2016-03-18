@@ -1,6 +1,10 @@
 <snippet>
     <content><![CDATA[
-define("LOG_FILENAME", \$_SERVER["DOCUMENT_ROOT"] . "/log.txt");
+ob_start();
+print_r(${1:\$arFields});
+\$buffer = ob_get_clean();
+\$buffer .= "\n";
+AddMessage2Log(\$buffer);
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <!-- <tabTrigger>bajax</tabTrigger> -->

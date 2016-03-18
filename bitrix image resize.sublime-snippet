@@ -1,20 +1,20 @@
 <snippet>
 	<content><![CDATA[
-if (empty(\$arResult["ITEMS"])) {
+if (empty(\$arResult['ITEMS'])) {
 	return;
 }
 
-foreach (\$arResult["ITEMS"] as \$key => \$arItem) {
+foreach (\$arResult['ITEMS'] as \$key => \$arItem) {
 	if (
-		!empty(\$arItem["PREVIEW_PICTURE"])
-		&& is_array(\$arItem["PREVIEW_PICTURE"])
+		!empty(\$arItem['PREVIEW_PICTURE'])
+		&& is_array(\$arItem['PREVIEW_PICTURE'])
 	) {
 		if (!is_object(\$CFile)) \$CFile = new CFile;
-		\$arResult["ITEMS"][\$key]["PREVIEW_PICTURE_CUSTOM"] = \$CFile->ResizeImageGet(
-			\$arItem["PREVIEW_PICTURE"],
+		\$arResult['ITEMS'][\$key]['PREVIEW_PICTURE_CUSTOM'] = \$CFile->ResizeImageGet(
+			\$arItem['PREVIEW_PICTURE'],
 			array(
-				"width" => ${1:219},
-				"height" => ${2:162},
+				'width' => ${1:219},
+				'height' => ${2:162},
 			),
 			BX_RESIZE_IMAGE_EXACT,
 			// BX_RESIZE_IMAGE_PROPORTIONAL,

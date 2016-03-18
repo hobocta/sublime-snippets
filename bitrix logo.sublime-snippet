@@ -2,12 +2,12 @@
 	<content><![CDATA[
 <?
 if (!\$is['front']) {
-	?><a href="<?= SITE_DIR ?>"><?
+	?><a href='<?= SITE_DIR ?>'><?
 }
 ?>
 <?\$APPLICATION->IncludeComponent(
 	"bitrix:main.include",
-	"",
+	",
 	array(
 		"AREA_FILE_SHOW" => "file",
 		"PATH" => SITE_DIR . "includes/logo.php"
