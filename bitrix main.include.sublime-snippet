@@ -1,11 +1,11 @@
 <snippet>
 	<content><![CDATA[
 <?\$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	",
+	'bitrix:main.include',
+	'',
 	array(
-		"AREA_FILE_SHOW" => "file",
-		"PATH" => SITE_DIR . "includes/${1:logo}.php"
+		'AREA_FILE_SHOW' => 'file',
+		'PATH' => SITE_DIR . 'includes/${1:logo}.php'
 	),
 	false
 );?>
